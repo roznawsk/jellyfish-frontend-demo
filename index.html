@@ -1,0 +1,45 @@
+<!-- <div id="app"></div> -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RTCon workshops</title>
+  </head>
+  <body>
+    <div class="flex flex-col items-start gap-2 p-2">
+      <div>
+        <button id="grant-permission-btn" class="btn btn-sm">Grant permission</button>
+        <button id="enumerate-devices-btn" class="btn btn-sm">List devices</button>
+      </div>
+      <div id="device-buttons-container" class="hidden flex-col items-start gap-2 p-2">
+        <div id="start-video-devices-buttons" class="flex flex-row flex-wrap gap-2"></div>
+        <div id="start-audio-devices-buttons" class="flex flex-row flex-wrap gap-2"></div>
+      </div>
+      <div class="flex flex-row">
+        <video id="local-video-player" class="h-[150px]"></video>
+        <span id="audio-indicator"></span>
+      </div>
+      <input id="token-input" type="text" placeholder="Token" class="input input-bordered w-full max-w-xs" />
+      <div>
+        <button id="connect-btn" class="btn btn-sm btn-success">Connect</button>
+        <button id="disconnect-btn" class="btn btn-sm btn-error">Disconnect</button>
+        <span id="connection-status"></span>
+      </div>
+      <div>
+        <button id="add-video-track-btn" class="btn btn-sm btn-success">Add video track</button>
+        <button id="remove-video-track-btn" class="btn btn-sm btn-error">Remove video track</button>
+      </div>
+      <div>
+        <span id="local-track-id"></span>
+      </div>
+      <div id="remote-tracks-container"></div>
+      <video id="hls-player"></video>
+      <button id="start-hls-btn" class="btn btn-sm">Start hls button</button>
+    </div>
+    <!-- <div id="app"></div> -->
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
